@@ -12,16 +12,34 @@ let control = false;
 for (let i = 0; i < mailLists.length; i++) {
 //    - SE è presente 
       if (mailLists[i] === promptMail) {
-        control = true;                                   // ALLORA cambio il valore di control 
+        control = true;                   // ALLORA cambio il valore di control 
       }
 }
 console.log(control);
 //- SE è true 
 if (control) {
-    console.log(`${promptMail} è presente il lista`)    // ALLORA sarà presente il lista 
+    console.log(`${promptMail} è presente il lista`);    // ALLORA sarà presente in lista 
 } else {
-    console.log(`${promptMail} non è presente in lista`) // ALTRIMENTI non sarà presente in lista 
+    console.log(`${promptMail} non è presente in lista`); // ALTRIMENTI non sarà presente in lista 
 }
 
 
-//- stampa un messaggio appropriato sull’esito del controllo.
+//# Dadi
+//- Genero un numero random da 1 a 6, sia per il giocatore sia per il computer.
+const player = Math.floor(Math.random() * 6) +1;
+console.log(player);
+const computer = Math.floor(Math.random () * 6) +1;
+console.log(computer);
+//- Stabilisco il vincitore, in base a chi fa il punteggio più alto.
+//  - SE il numero random del player è maggiore del computer
+      if (player > computer) {
+        console.log('player wins');     //    ALLORA il player ha vinto  
+      } else if (player < computer) {   // - SE il numero random del player è minore del computer
+        console.log('player loose')     //   ALLORA il player ha perso
+      } else {                          // - SE il numero random del player e del computer è uguale
+        console.log('tie')              //   ALLORA pareggiano
+      }
+
+
+
+
